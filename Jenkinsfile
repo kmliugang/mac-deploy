@@ -5,7 +5,6 @@ pipeline{
             steps {
                 echo '正在构建Building...'
                 sh 'ls -al'
-                sh 'npm config set registry https://registry.npmmirror.org'
                 sh 'npm install'
                 sh 'npm run docs:build'
             }
