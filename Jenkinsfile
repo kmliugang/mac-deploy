@@ -27,10 +27,21 @@ pipeline{
                 }
             }
         }
-        stage('Deploy') {
+        stage('部署') {
             steps {
                 echo 'Deploying...'
-                // Add deployment commands here
+                dir('.vitepress/dist') {
+                    echo '切换到 .vitepress/dist 目录'
+                    sh 'ls -al'
+                    // 假设你有一个部署脚本 deploy.sh
+                    // sh './deploy.sh'
+                    writeFile file: 'Dockerfile', text: '''FROM nginx
+                    ADD docs.tar.gz /usr/share/nginx/html'''
+                    sh 'cat Dockerfile'
+                    sh 'docker build -f Dockerfile -t docs-app:latest .'
+                    sh 'docker rm -f app'
+                    sh 'docker run -d --name app -p 8080:80 docs-app:latest'
+                }
             }
         }
     }
