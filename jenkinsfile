@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage('拉取代码') {
             steps {
-                echo '正在拉取pull...'
+                echo '正在拉取pull...修改了名称Jenkinsfile'
                 sh 'ls -al'
             }
         }
