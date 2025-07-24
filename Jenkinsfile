@@ -10,6 +10,7 @@ pipeline{
                 sh 'ls -al'
                 sh 'npm install'
                 sh 'npm run docs:build'
+                sh 'ls .vitepress/'
             }
         }
         stage('Deploy') {
