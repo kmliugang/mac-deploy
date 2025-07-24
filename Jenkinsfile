@@ -2,7 +2,6 @@ pipeline{
     agent any
     tools {
         nodejs 'nodejs24' // 这里填写你在 Jenkins 配置的名称
-        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker' // 这里填写你在 Jenkins 配置的 Docker 工具名称
     }
     stages {
         stage('构建项目') {
@@ -31,7 +30,6 @@ pipeline{
         stage('部署') {
             steps {
                 echo 'Deploying...'
-                sh 'docker --version'
                 dir('.vitepress/dist') {
                     echo '切换到 .vitepress/dist 目录'
                     sh 'ls -al'
