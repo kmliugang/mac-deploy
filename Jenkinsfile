@@ -2,6 +2,7 @@ pipeline{
     agent any
     tools {
         nodejs 'nodejs24' // 这里填写你在 Jenkins 配置的名称
+        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker' // 这里填写你在 Jenkins 配置的 Docker 工具名称
     }
     stages {
         stage('构建项目') {
