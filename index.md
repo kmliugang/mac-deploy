@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "农场大作战666999888666"
+  name: "农场大作战666999888666rrr"
   text: "个人杂记博客"
   tagline: 金风玉露一相逢，便胜却人间无数
   actions:
