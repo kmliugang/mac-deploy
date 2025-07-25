@@ -48,7 +48,7 @@ pipeline{
                     sh 'cat Dockerfile'
                     sh 'docker build -f Dockerfile -t docs-app:latest .'
                     sh 'docker rm -f app'
-                    sh 'docker run -d --name app -p 8080:80 docs-app:latest'
+                    sh 'docker run -d --name app -p 8081:80 docs-app:latest'
                 }
             }
         }
