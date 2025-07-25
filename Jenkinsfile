@@ -27,6 +27,14 @@ pipeline{
                 }
             }
         }
+        stage('检查Docker') {
+            steps {
+                sh 'whoami'
+                sh 'which docker || echo docker not found'
+                sh 'docker version || echo docker failed'
+            }
+        }
+
         stage('部署') {
             steps {
                 echo 'Deploying...'
