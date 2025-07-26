@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "农场大作战666999888666rrrhhh"
+  name: "农场大作战uuuuuu"
   text: "个人杂记博客"
-  tagline: 金风玉露一相逢，便胜却人间无数
+  tagline: 金风玉露一相逢，便胜却人间无数uuuuuu
   actions:
     - theme: brand
       text: Markdown Examples
