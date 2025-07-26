@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "阿枫的个人博客",
+  title: "阿枫的个人博客-终于跑通Jenkins自动部署",
   titleTemplate: "枫 Project",
   description: "A VitePress Site",
   themeConfig: {
